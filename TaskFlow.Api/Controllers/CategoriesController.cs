@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using TaskFlow.Api.Data;
 using TaskFlow.Api.Models;
+using TaskFlow.Api.DTOs;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace TaskFlow.Api.Controllers
@@ -20,27 +22,46 @@ namespace TaskFlow.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCategories()
         {
-            var list = await _context.Categories.ToListAsync();
-            return Ok(list);
+            var list = await _context.Categories
+                             .Include(c => c.TodoItems) 
+                             .ToListAsync();
+            var result = list.Select(c => new CategoriesResponseDto 
+            {
+                Id = c.Id,
+                Name = c.Name,
+                TotalItem = c.TodoItems.Count()
+            }).ToList();
+
+            return Ok(result);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateCategory([FromBody] Category request)
+
+        public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryRequestDto request)
         {
-            if (request == null)
+            if (request == null || string.IsNullOrEmpty(request.Name))
             {
                 return BadRequest("Khong Duoc De Trong");
             }
 
-            request.Id = 0;
+            var category = new Category()
+            {
+                Name = request.Name,
+            };
 
-            _context.Categories.Add(request);
+            _context.Categories.Add(category);
             await _context.SaveChangesAsync();
 
+            var responDto = new CategoriesResponseDto
+            {
+                Id = category.Id,
+                Name = request.Name,
+                TotalItem = 0
+            };
             return CreatedAtAction(
             nameof(GetCategories),
-            new { id = request.Id },
-            request);
+            new { id = responDto.Id },
+            responDto);
         }
     }
 }

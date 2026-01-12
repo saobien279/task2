@@ -134,3 +134,4 @@ C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\refint
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.pdb
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.genruntimeconfig.cache
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\ref\TaskFlow.Api.dll
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.sourcelink.json
