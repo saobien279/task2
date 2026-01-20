@@ -1,67 +1,84 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using TaskFlow.Api.Data;
-using TaskFlow.Api.Models;
 using TaskFlow.Api.DTOs;
-using System.ComponentModel.DataAnnotations;
-
+using TaskFlow.Api.Services.Interfaces;
 
 namespace TaskFlow.Api.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        // 1. Bây giờ Controller chỉ nói chuyện với Service (Quản lý), không gọi Repository hay DbContext nữa
+        private readonly ICategoryService _service;
 
-        public CategoriesController(AppDbContext context)
+        public CategoriesController(ICategoryService service)
         {
-            _context = context;
+            _service = service;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetCategories()
         {
-            var list = await _context.Categories
-                             .Include(c => c.TodoItems) 
-                             .ToListAsync();
-            var result = list.Select(c => new CategoriesResponseDto 
-            {
-                Id = c.Id,
-                Name = c.Name,
-                TotalItem = c.TodoItems.Count()
-            }).ToList();
+            // Service đã lo hết việc lấy dữ liệu và Map sang DTO rồi
+            var result = await _service.GetAllAsync();
+            return Ok(result);
+        }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCategoryById(int id)
+        {
+            var result = await _service.GetByIdAsync(id);
+            if (result == null)
+            {
+                return NotFound($"Không tìm thấy Category có ID = {id}");
+            }
             return Ok(result);
         }
 
         [HttpPost]
-
         public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryRequestDto request)
         {
-            if (request == null || string.IsNullOrEmpty(request.Name))
+            // Service lo việc Map và Lưu
+            var result = await _service.CreateAsync(request);
+
+            // Trả về kết quả
+            return CreatedAtAction(nameof(GetCategoryById), new { id = result.Id }, result);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCategory(int id, [FromBody] UpdateCategoryRequestDto request)
+        {
+            try
             {
-                return BadRequest("Khong Duoc De Trong");
+                // Gọi Service để update
+                var success = await _service.UpdateAsync(id, request);
+
+                if (!success) return NotFound("Không tìm thấy Category để sửa");
+
+                return NoContent();
             }
-
-            var category = new Category()
+            catch (Exception ex)
             {
-                Name = request.Name,
-            };
+                // Bắt cái lỗi "Trùng tên" mà ta đã ném ra ở Service
+                return BadRequest(ex.Message);
+            }
+        }
 
-            _context.Categories.Add(category);
-            await _context.SaveChangesAsync();
-
-            var responDto = new CategoriesResponseDto
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            try
             {
-                Id = category.Id,
-                Name = request.Name,
-                TotalItem = 0
-            };
-            return CreatedAtAction(
-            nameof(GetCategories),
-            new { id = responDto.Id },
-            responDto);
+                var success = await _service.DeleteAsync(id);
+                if (!success) return NotFound("Không tìm thấy danh mục để xóa");
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                // Hứng cái lỗi "vẫn còn công việc bên trong" và trả về 400 Bad Request
+                return BadRequest(new { message = ex.Message });
+            }
         }
     }
 }

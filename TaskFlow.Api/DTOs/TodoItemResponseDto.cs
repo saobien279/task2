@@ -22,4 +22,17 @@ namespace TaskFlow.Api.DTOs
         [Range(1, int.MaxValue , ErrorMessage = "CategoryId Phải lớn hơn 0")]
         public int CategoryId { get; set; }
     }
+
+    public class UpdateTodoItemRequestDto
+    {
+
+        [Required(ErrorMessage = "Tiêu đề không được để trống")]
+        [StringLength(100, MinimumLength = 5, ErrorMessage = "Tiêu đề phải từ 5 đến 100 ký tự")]
+        public string Title { get; set; }
+
+        public bool IsCompleted { get; set; }
+
+        [Range(1, int.MaxValue, ErrorMessage = "Danh mục không hợp lệ")]
+        public int CategoryId { get; set; }
+    }
 }

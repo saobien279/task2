@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using TaskFlow.Api.Data;
 using TaskFlow.Api.Models;
 using TaskFlow.Api.DTOs;
+using AutoMapper;
 namespace TaskFlow.Api.Controllers
 {
     [ApiController]
@@ -11,10 +12,12 @@ namespace TaskFlow.Api.Controllers
     public class TodoItemsController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IMapper _mapper;
 
-        public TodoItemsController(AppDbContext context)
+        public TodoItemsController(AppDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -25,95 +28,60 @@ namespace TaskFlow.Api.Controllers
                                   .Include(t => t.Category)
                                   .ToListAsync();
 
-        // Chuyển đổi sang List DTO
-
-
-        var result = todoItems.Select(t => {
-        // Kiểm tra xem đối tượng Category có tồn tại hay không
-        string name;
-        if (t.Category != null) 
-        {
-            name = t.Category.Name; // Nếu có thì lấy tên
-        }
-        else 
-        {
-            name = "N/A"; // Nếu không có thì gán là N/A
-        }
-
-        return new TodoItemResponseDto
-        {
-            Id = t.Id,
-            Title = t.Title,
-            IsCompleted = t.IsCompleted,
-            CategoryId = t.CategoryId,
-            CategoryName = name
-        };
-        }).ToList();
-
-        return Ok(result);
+            var result = _mapper.Map<List<TodoItemResponseDto>>(todoItems);
+            return Ok(result);
         }
 
         [HttpPost]
 
         public async Task<IActionResult> CreateToDoItem([FromBody] CreateTodoItemRequestDto request)
         {
-            //Kiem tra du lieu loi
-            if (request == null)
-            {
-                return BadRequest("Dữ liệu không được để trống");
-            }
-
             //mapping chuyen doi
-            var todoItems = new TodoItem
-            {
-                Title = request.Title,
-                IsCompleted = request.IsCompleted,
-                CategoryId = request.CategoryId,
-            };
+            var todoItem = _mapper.Map<TodoItem>(request);
 
             //luu vao db
-            _context.TodoItems.Add(todoItems);
+            _context.TodoItems.Add(todoItem);
             await _context.SaveChangesAsync();
 
-            await _context.Entry(todoItems).Reference(t => t.Category).LoadAsync();
+            await _context.Entry(todoItem).Reference(t => t.Category).LoadAsync();
             //reponse to user
-            var responseDto = new TodoItemResponseDto
-            {
-                Id = todoItems.Id,
-                Title = todoItems.Title,
-                IsCompleted = todoItems.IsCompleted,
-                CategoryId = todoItems.CategoryId,
-                CategoryName = todoItems.Category?.Name ?? "N/A"
-            };
+            var responseDto = _mapper.Map<TodoItemResponseDto>(todoItem);
             return CreatedAtAction(nameof(GetToDoItems), new { id = responseDto.Id }, responseDto);
         }
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTodoItem(int id, [FromBody] TodoItem request)
+        public async Task<IActionResult> UpdateTodoItem(int id, [FromBody] UpdateTodoItemRequestDto request)
         {
-            if (id != request.Id)
-            {
-                return BadRequest("ID không khớp!");
-            }
-            _context.Entry(request).State = EntityState.Modified;
 
-            try
+
+            // 2. Tìm món đồ cũ trong kho (Database)
+            var todoItem = await _context.TodoItems.FindAsync(id);
+
+            // 3. Nếu không tìm thấy -> Báo lỗi 404
+            if (todoItem == null)
             {
-                await _context.SaveChangesAsync();
+                return NotFound($"Không tìm thấy công việc có ID = {id}");
             }
-            catch (DbUpdateConcurrencyException)
+
+            // 4. Kiểm tra xem CategoryId mới có tồn tại không (Optional nhưng nên làm)
+            var categoryExists = await _context.Categories.AnyAsync(c => c.Id == request.CategoryId);
+            if (!categoryExists)
             {
-                if (!_context.TodoItems.Any(e => e.Id == id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return BadRequest("Category ID không tồn tại!");
             }
+
+            // 5. Mapping: Đổ dữ liệu MỚI đè lên dữ liệu CŨ
+            _mapper.Map(request, todoItem);
+
+            // 6. Lưu thay đổi
+            await _context.SaveChangesAsync();
+
+            // 7. Trả về 204 No Content (Thành công nhưng không cần trả dữ liệu gì)
             return NoContent();
+
+
+
         }
 
         [HttpDelete("{id}")]

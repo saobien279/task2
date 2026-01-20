@@ -5,6 +5,8 @@ C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\TaskFl
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\TaskFlow.Api.runtimeconfig.json
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\TaskFlow.Api.dll
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\TaskFlow.Api.pdb
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\Humanizer.dll
@@ -120,6 +122,7 @@ C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFl
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.csproj.CoreCompileInputs.cache
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.sourcelink.json
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets\msbuild.TaskFlow.Api.Microsoft.AspNetCore.StaticWebAssets.props
@@ -134,4 +137,3 @@ C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\refint
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.pdb
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.genruntimeconfig.cache
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\ref\TaskFlow.Api.dll
-C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.sourcelink.json

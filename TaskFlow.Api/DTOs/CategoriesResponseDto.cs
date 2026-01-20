@@ -18,4 +18,15 @@ namespace TaskFlow.Api.DTOs
         [NoAdmin]
         public string Name { get; set; }
     }
+
+    public class UpdateCategoryRequestDto
+    {
+        [Required]
+        public int ? id  { get; set; }
+
+        [Required]
+        [StringLength(100, MinimumLength = 5,ErrorMessage = "Tiêu đề phải từ 5 đến 100 ký tự")]
+        public string Name { get; set; }
+
+    }
 }
