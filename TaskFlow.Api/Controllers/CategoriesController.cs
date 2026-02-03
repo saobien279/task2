@@ -8,22 +8,23 @@ namespace TaskFlow.Api.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        // 1. Bây giờ Controller chỉ nói chuyện với Service (Quản lý), không gọi Repository hay DbContext nữa
         private readonly ICategoryService _service;
 
+        // Tiêm Service vào (thay vì Repository hay DbContext như trước)
         public CategoriesController(ICategoryService service)
         {
             _service = service;
         }
 
+        // GET: api/Categories
         [HttpGet]
         public async Task<IActionResult> GetCategories()
         {
-            // Service đã lo hết việc lấy dữ liệu và Map sang DTO rồi
             var result = await _service.GetAllAsync();
             return Ok(result);
         }
 
+        // GET: api/Categories/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCategoryById(int id)
         {
@@ -35,35 +36,38 @@ namespace TaskFlow.Api.Controllers
             return Ok(result);
         }
 
+        // POST: api/Categories
         [HttpPost]
         public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryRequestDto request)
         {
-            // Service lo việc Map và Lưu
+            // Service sẽ lo việc Map và Lưu
             var result = await _service.CreateAsync(request);
-
-            // Trả về kết quả
+            
+            // Trả về 201 Created cùng với Location Header
             return CreatedAtAction(nameof(GetCategoryById), new { id = result.Id }, result);
         }
 
+        // PUT: api/Categories/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCategory(int id, [FromBody] UpdateCategoryRequestDto request)
         {
-            try
+            try 
             {
-                // Gọi Service để update
+                // Service trả về True/False để biết update thành công hay không
                 var success = await _service.UpdateAsync(id, request);
-
+                
                 if (!success) return NotFound("Không tìm thấy Category để sửa");
-
+                
                 return NoContent();
             }
             catch (Exception ex)
             {
-                // Bắt cái lỗi "Trùng tên" mà ta đã ném ra ở Service
-                return BadRequest(ex.Message);
+                // Bắt lỗi Logic (ví dụ: Trùng tên) từ Service ném ra
+                return BadRequest(new { message = ex.Message });
             }
         }
 
+        // DELETE: api/Categories/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(int id)
         {
@@ -76,7 +80,8 @@ namespace TaskFlow.Api.Controllers
             }
             catch (Exception ex)
             {
-                // Hứng cái lỗi "vẫn còn công việc bên trong" và trả về 400 Bad Request
+                // QUAN TRỌNG: Bắt lỗi "Vẫn còn TodoItem bên trong" để báo cho user
+                // Trả về 400 Bad Request kèm lời nhắn
                 return BadRequest(new { message = ex.Message });
             }
         }

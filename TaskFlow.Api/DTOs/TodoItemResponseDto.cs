@@ -33,6 +33,6 @@ namespace TaskFlow.Api.DTOs
         public bool IsCompleted { get; set; }
 
         [Range(1, int.MaxValue, ErrorMessage = "Danh mục không hợp lệ")]
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
     }
 }

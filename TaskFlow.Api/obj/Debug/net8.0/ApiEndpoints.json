@@ -27,6 +27,22 @@
   },
   {
     "ContainingType": "TaskFlow.Api.Controllers.CategoriesController",
+    "Method": "GetCategoryById",
+    "RelativePath": "api/Categories/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskFlow.Api.Controllers.CategoriesController",
     "Method": "UpdateCategory",
     "RelativePath": "api/Categories/{id}",
     "HttpMethod": "PUT",
@@ -64,17 +80,38 @@
   },
   {
     "ContainingType": "TaskFlow.Api.Controllers.TodoItemsController",
-    "Method": "GetToDoItems",
+    "Method": "GetTodoItems",
     "RelativePath": "api/TodoItems",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchTerm",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "TaskFlow.Api.Controllers.TodoItemsController",
-    "Method": "CreateToDoItem",
+    "Method": "CreateTodoItem",
     "RelativePath": "api/TodoItems",
     "HttpMethod": "POST",
     "IsController": true,
@@ -83,6 +120,22 @@
       {
         "Name": "request",
         "Type": "TaskFlow.Api.DTOs.CreateTodoItemRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskFlow.Api.Controllers.TodoItemsController",
+    "Method": "GetTodoItemById",
+    "RelativePath": "api/TodoItems/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
