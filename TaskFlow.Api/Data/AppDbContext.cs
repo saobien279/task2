@@ -11,5 +11,7 @@ namespace TaskFlow.Api.Data
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<TodoItem> TodoItems { get; set; }
+
+        public DbSet<User> Users { get; set; }
     }
 }
