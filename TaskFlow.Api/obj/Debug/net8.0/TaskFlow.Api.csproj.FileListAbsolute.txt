@@ -138,3 +138,4 @@ C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFl
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.genruntimeconfig.cache
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\ref\TaskFlow.Api.dll
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -89,7 +89,7 @@ namespace TaskFlow.Api.Services
                 throw new Exception("Chưa cấu hình khóa bí mật trong appsettings.json!");
             }
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyString));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyString));//thanh 1 chuoi nhi phan
 
             // 3. Tạo chữ ký số (Dùng thuật toán HmacSha256)
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
