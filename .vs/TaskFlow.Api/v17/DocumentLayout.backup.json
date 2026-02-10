@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -145,13 +145,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\Services\\AuthService.cs",
               "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\AuthService.cs",
               "RelativeToolTip": "TaskFlow.Api\\Services\\AuthService.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAIwEMAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAIwEMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-03T09:08:27.038Z",
               "EditorCaption": ""
@@ -210,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "TaskFlow.Api\\appsettings.Development.json",
@@ -229,7 +229,7 @@
               "RelativeDocumentMoniker": "TaskFlow.Api\\Program.cs",
               "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Program.cs",
               "RelativeToolTip": "TaskFlow.Api\\Program.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAGgAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-12T03:40:03.383Z",
               "EditorCaption": ""

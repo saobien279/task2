@@ -125,11 +125,6 @@ C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFl
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.sourcelink.json
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets\msbuild.TaskFlow.Api.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets\msbuild.build.TaskFlow.Api.props
-C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TaskFlow.Api.props
-C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TaskFlow.Api.props
-C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\scopedcss\bundle\TaskFlow.Api.styles.css
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.436FEAE8.Up2Date
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFlow.Api.dll
@@ -139,3 +134,11 @@ C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\TaskFl
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\ref\TaskFlow.Api.dll
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\bin\Debug\net8.0\TaskFlow.Api.staticwebassets.endpoints.json
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\SAO BIEN\source\repos\TaskFlow.Api\TaskFlow.Api\obj\Debug\net8.0\swae.build.ex.cache

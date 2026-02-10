@@ -8,5 +8,7 @@
 
         public int CategoryId { get; set; }
         public Category  Category { get; set; }//? là có thể để null
+
+        public int UserId { get; set; }
     }
 }
