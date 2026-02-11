@@ -8,84 +8,78 @@ namespace TaskFlow.Api.Services
 {
     public class CategoryService : ICategoryService
     {
-        private readonly ICategoryRepository _repository; // Gọi Thủ kho
-        private readonly IMapper _mapper;                 // Gọi Máy đóng gói
+        private readonly ICategoryRepository _repository;
+        private readonly IMapper _mapper;
 
         public CategoryService(ICategoryRepository repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
         }
-        public async Task<IEnumerable<CategoriesResponseDto>> GetAllAsync()
-        {
-            // 1. Gọi Repo lấy dữ liệu thô
-            var categories = await _repository.GetAllAsync();
 
-            // 2. Map sang DTO
+        public async Task<IEnumerable<CategoriesResponseDto>> GetAllAsync(int userId)
+        {
+            // 1. Truyền userId xuống Repo để lọc lấy đúng đồ của mình
+            var categories = await _repository.GetAllAsync(userId);
             return _mapper.Map<IEnumerable<CategoriesResponseDto>>(categories);
         }
 
-        public async Task<CategoriesResponseDto> GetByIdAsync(int id)
+        public async Task<CategoriesResponseDto> GetByIdAsync(int id, int userId)
         {
-            var category = await _repository.GetByIdAsync(id);
+            // Tìm đúng ID và phải đúng chủ sở hữu
+            var category = await _repository.GetByIdAsync(id, userId);
             if (category == null) return null;
 
             return _mapper.Map<CategoriesResponseDto>(category);
         }
 
-        public async Task<CategoriesResponseDto> CreateAsync(CreateCategoryRequestDto request)
+        public async Task<CategoriesResponseDto> CreateAsync(CreateCategoryRequestDto request, int userId)
         {
-            // 1. Map từ DTO sang Entity
             var category = _mapper.Map<Category>(request);
 
-            // 2. Gọi Repo lưu xuống DB
-            await _repository.AddAsync(category);
+            // --- QUAN TRỌNG NHẤT: ĐÁNH DẤU CHỦ SỞ HỮU ---
+            category.UserId = userId;
 
-            // 3. Map ngược lại sang ResponseDTO (đã có ID mới sinh) để trả về
+            await _repository.AddAsync(category);
             return _mapper.Map<CategoriesResponseDto>(category);
         }
 
-        public async Task<bool> UpdateAsync(int id, UpdateCategoryRequestDto request)
+        public async Task<bool> UpdateAsync(int id, UpdateCategoryRequestDto request, int userId)
         {
-            // 1. Tìm bản ghi cũ
-            var category = await _repository.GetByIdAsync(id);
+            // 1. Tìm bản ghi (kèm userId để đảm bảo không sửa bậy đồ của người khác)
+            var category = await _repository.GetByIdAsync(id, userId);
             if (category == null) return false;
 
-            // 2. CHECK LOGIC: Kiểm tra trùng tên (Nghiệp vụ nằm ở đây!)
-            // Nếu tên mới khác null VÀ tên đó đã tồn tại ở bản ghi khác
+            // 2. Kiểm tra trùng tên (Trong phạm vi các Category của user này)
             if (request.Name != null)
             {
-                bool isDuplicate = await _repository.IsNameExistsAsync(request.Name, id);
+                bool isDuplicate = await _repository.IsNameExistsAsync(request.Name, id, userId);
                 if (isDuplicate)
                 {
                     throw new Exception("Tên danh mục này đã tồn tại!");
-                    // (Tạm thời ném lỗi, sau này ta sẽ có cách xử lý mượt hơn)
                 }
             }
 
-            // 3. Map đè dữ liệu mới lên cũ
+            // 3. Map đè và lưu
             _mapper.Map(request, category);
-
-            // 4. Lưu
             await _repository.UpdateAsync(category);
             return true;
         }
 
-        public async Task<bool> DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(int id, int userId)
         {
-            // 1. Kiểm tra xem Category có tồn tại không
-            var category = await _repository.GetByIdAsync(id);
+            // 1. Tìm bản ghi (kèm userId để đảm bảo không xóa bậy đồ người khác)
+            var category = await _repository.GetByIdAsync(id, userId);
             if (category == null) return false;
 
-            // 2. LOGIC MỚI: Kiểm tra xem có việc nào bên trong không
+            // 2. Check xem có công việc nào bên trong không
             bool hasItems = await _repository.HasTodoItemsAsync(id);
             if (hasItems)
             {
-                // Ném ra một ngoại lệ để báo cho Controller biết lý do
                 throw new Exception("Không thể xóa danh mục này vì vẫn còn công việc bên trong!");
             }
 
-            // 3. Nếu trống thì mới cho xóa
+            // 3. Xóa
             await _repository.DeleteAsync(category);
             return true;
         }

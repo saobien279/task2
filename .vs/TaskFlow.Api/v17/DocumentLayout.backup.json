@@ -153,8 +153,7 @@
               "RelativeToolTip": "TaskFlow.Api\\Services\\AuthService.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAIwEMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T09:08:27.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T09:08:27.038Z"
             },
             {
               "$type": "Document",
@@ -166,8 +165,7 @@
               "RelativeToolTip": "TaskFlow.Api\\DTOs\\AuthDtos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T08:57:11.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T08:57:11.352Z"
             },
             {
               "$type": "Document",
@@ -179,8 +177,7 @@
               "RelativeToolTip": "TaskFlow.Api\\Controllers\\TodoItemsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T08:57:07.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T08:57:07.642Z"
             },
             {
               "$type": "Document",
@@ -192,8 +189,7 @@
               "RelativeToolTip": "TaskFlow.Api\\Controllers\\CategoriesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T03:09:42.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T03:09:42.423Z"
             },
             {
               "$type": "Document",
@@ -205,8 +201,7 @@
               "RelativeToolTip": "TaskFlow.Api\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T09:02:29.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T09:02:29.338Z"
             },
             {
               "$type": "Document",
@@ -218,8 +213,7 @@
               "RelativeToolTip": "TaskFlow.Api\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-06T08:54:26.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-06T08:54:26.627Z"
             },
             {
               "$type": "Document",
@@ -244,8 +238,7 @@
               "RelativeToolTip": "TaskFlow.Api\\Services\\CategoryService.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAgwDkAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T08:54:17.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T08:54:17.984Z"
             },
             {
               "$type": "Document",
@@ -257,8 +250,7 @@
               "RelativeToolTip": "TaskFlow.Api\\Services\\TodoItemService.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwCQAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T08:47:43.661Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T08:47:43.661Z"
             },
             {
               "$type": "Document",
@@ -270,8 +262,7 @@
               "RelativeToolTip": "TaskFlow.Api\\Validations\\NoAdminAttribute.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-08T08:24:08.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-08T08:24:08.24Z"
             },
             {
               "$type": "Document",

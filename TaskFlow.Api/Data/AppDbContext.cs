@@ -25,7 +25,7 @@ namespace TaskFlow.Api.Data
                 .HasOne<User>() // Một TodoItem thuộc về một User
                 .WithMany()     // Một User có nhiều TodoItem (nhưng ta ko cần khai báo List<TodoItem> bên User nên để trống)
                 .HasForeignKey(t => t.UserId) // Khóa ngoại là UserId
-                .OnDelete(DeleteBehavior.Cascade); // Nếu xóa User -> Xóa hết Task của họ
+                .OnDelete(DeleteBehavior.NoAction);
 
             // 2. Một User có nhiều Categories
             modelBuilder.Entity<Category>()

@@ -1,110 +1,114 @@
-﻿using AutoMapper;
+﻿using Microsoft.AspNetCore.Mvc;
 using TaskFlow.Api.DTOs;
-using TaskFlow.Api.Models;
-using TaskFlow.Api.Repositories.Interfaces;
 using TaskFlow.Api.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
-namespace TaskFlow.Api.Services
+namespace TaskFlow.Api.Controllers
 {
-    public class TodoItemService : ITodoItemService
+    [Route("api/[controller]")]
+    [ApiController]
+    [Authorize] // Bắt buộc phải có Token mới được vào
+    public class CategoriesController : ControllerBase
     {
-        private readonly ITodoItemRepository _repository;
-        private readonly ICategoryRepository _categoryRepository; // Gọi thêm ông hàng xóm
-        private readonly IMapper _mapper;
+        private readonly ICategoryService _service;
 
-        public TodoItemService(
-            ITodoItemRepository repository,
-            ICategoryRepository categoryRepository,
-            IMapper mapper)
+        public CategoriesController(ICategoryService service)
         {
-            _repository = repository;
-            _categoryRepository = categoryRepository;
-            _mapper = mapper;
+            _service = service;
         }
 
-        public async Task<PagedResult<TodoItemResponseDto>> GetAllAsync(TodoItemParameters parameters)
+        // GET: api/Categories
+        [HttpGet]
+        public async Task<IActionResult> GetCategories()
         {
-            // 1. Gọi Repo: Lấy Tuple (danh sách gốc, tổng số lượng)
-            // Cú pháp (var items, var totalCount) là cách "bóc tách" cái Tuple ra thành 2 biến riêng biệt.
-            var (items, totalCount) = await _repository.GetAllAsync(parameters);
+            // 1. Móc UserId từ Token
+            var userIdString = User.FindFirst("UserId")?.Value;
+            if (string.IsNullOrEmpty(userIdString)) return Unauthorized();
+            int userId = int.Parse(userIdString);
 
-            // 2. Map sang DTO: Chuyển đổi dữ liệu thô sang dữ liệu đẹp để trả về
-            var itemDtos = _mapper.Map<IEnumerable<TodoItemResponseDto>>(items);
+            // 2. Truyền xuống Service
+            var result = await _service.GetAllAsync(userId);
+            return Ok(result);
+        }
 
-            // 3. Đóng gói vào hộp PagedResult
-            return new PagedResult<TodoItemResponseDto>
+        // GET: api/Categories/5
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCategoryById(int id)
+        {
+            // 1. Móc UserId
+            var userIdString = User.FindFirst("UserId")?.Value;
+            if (string.IsNullOrEmpty(userIdString)) return Unauthorized();
+            int userId = int.Parse(userIdString);
+
+            // 2. Truyền xuống Service
+            var result = await _service.GetByIdAsync(id, userId);
+            if (result == null)
             {
-                Items = itemDtos,           // Dữ liệu (Món hàng)
-                TotalCount = totalCount,    // Tổng số lượng tìm thấy (Hóa đơn)
-                PageNumber = parameters.PageNumber, // Trang hiện tại
-                PageSize = parameters.PageSize      // Kích thước trang
-            };
-        }
-
-        public async Task<TodoItemResponseDto> GetByIdAsync(int id)
-        {
-            var item = await _repository.GetByIdAsync(id);
-            if (item == null) return null;
-            return _mapper.Map<TodoItemResponseDto>(item);
-        }
-
-        public async Task<TodoItemResponseDto> CreateAsync(CreateTodoItemRequestDto request)
-        {
-            // 1. Map DTO -> Entity
-            var todoItem = _mapper.Map<TodoItem>(request);
-
-            // 2. CHECK LOGIC: Nhờ ông hàng xóm kiểm tra xem CategoryId có thật không?
-            var categoryExists = await _categoryRepository.ExistsAsync(request.CategoryId);
-            if (!categoryExists)
-            {
-                // Nếu không tồn tại -> Ném lỗi ngay, không cho lưu
-                throw new Exception($"Danh mục có ID = {request.CategoryId} không tồn tại!");
+                return NotFound($"Không tìm thấy Category có ID = {id} hoặc bạn không có quyền xem!");
             }
-
-            // 3. Lưu xuống DB
-            await _repository.AddAsync(todoItem);
-
-            // 4. MẸO QUAN TRỌNG:
-            // Khi vừa Add xong, biến 'todoItem' chỉ có ID mới, nhưng 'Category' bên trong đang là null.
-            // Nếu Map ngay bây giờ, 'CategoryName' sẽ bị rỗng.
-            // -> Ta gọi lại hàm GetByIdAsync (đã có Include) để lấy dữ liệu đầy đủ nhất trả về cho khách.
-            var freshItem = await _repository.GetByIdAsync(todoItem.Id);
-
-            return _mapper.Map<TodoItemResponseDto>(freshItem);
-
+            return Ok(result);
         }
 
-        public async Task<bool> UpdateAsync(int id, UpdateTodoItemRequestDto request)
+        // POST: api/Categories
+        [HttpPost]
+        public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryRequestDto request)
         {
-            var todoItem = await _repository.GetByIdAsync(id);
-            if (todoItem == null) return false;
+            // 1. Móc UserId
+            var userIdString = User.FindFirst("UserId")?.Value;
+            if (string.IsNullOrEmpty(userIdString)) return Unauthorized();
+            int userId = int.Parse(userIdString);
 
-            // CHECK LOGIC: Nếu người dùng muốn đổi sang Category khác
-            if (request.CategoryId != null)
+            // 2. Truyền xuống để gán chủ sở hữu cho Category mới
+            var result = await _service.CreateAsync(request, userId);
+
+            return CreatedAtAction(nameof(GetCategoryById), new { id = result.Id }, result);
+        }
+
+        // PUT: api/Categories/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCategory(int id, [FromBody] UpdateCategoryRequestDto request)
+        {
+            try
             {
-                var categoryExists = await _categoryRepository.ExistsAsync(request.CategoryId.Value);
-                if (!categoryExists)
-                {
-                    throw new Exception($"Danh mục mới (ID = {request.CategoryId}) không tồn tại!");
-                }
+                // 1. Móc UserId
+                var userIdString = User.FindFirst("UserId")?.Value;
+                if (string.IsNullOrEmpty(userIdString)) return Unauthorized();
+                int userId = int.Parse(userIdString);
+
+                // 2. Truyền xuống Service
+                var success = await _service.UpdateAsync(id, request, userId);
+
+                if (!success) return NotFound("Không tìm thấy Category để sửa hoặc bạn không có quyền!");
+
+                return NoContent();
             }
-
-            // Map đè dữ liệu mới (đã có cấu hình ignore null trong MappingProfile)
-            _mapper.Map(request, todoItem);
-
-            await _repository.UpdateAsync(todoItem);
-            return true;
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
-        public async Task<bool> DeleteAsync(int id)
+        // DELETE: api/Categories/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCategory(int id)
         {
-            var todoItem = await _repository.GetByIdAsync(id);
-            if (todoItem == null) return false;
+            try
+            {
+                // 1. Móc UserId
+                var userIdString = User.FindFirst("UserId")?.Value;
+                if (string.IsNullOrEmpty(userIdString)) return Unauthorized();
+                int userId = int.Parse(userIdString);
 
-            await _repository.DeleteAsync(todoItem);
-            return true;
+                // 2. Truyền xuống Service
+                var success = await _service.DeleteAsync(id, userId);
+                if (!success) return NotFound("Không tìm thấy danh mục để xóa hoặc bạn không có quyền!");
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
     }
 }
-
-

@@ -7,12 +7,11 @@ namespace TaskFlow.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize] // Bắt buộc phải có Token mới được vào
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService _service;
 
-        // Tiêm Service vào (thay vì Repository hay DbContext như trước)
         public CategoriesController(ICategoryService service)
         {
             _service = service;
@@ -22,7 +21,13 @@ namespace TaskFlow.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCategories()
         {
-            var result = await _service.GetAllAsync();
+            // 1. Móc UserId từ Token
+            var userIdString = User.FindFirst("UserId")?.Value;
+            if (string.IsNullOrEmpty(userIdString)) return Unauthorized();
+            int userId = int.Parse(userIdString);
+
+            // 2. Truyền xuống Service
+            var result = await _service.GetAllAsync(userId);
             return Ok(result);
         }
 
@@ -30,10 +35,16 @@ namespace TaskFlow.Api.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCategoryById(int id)
         {
-            var result = await _service.GetByIdAsync(id);
+            // 1. Móc UserId
+            var userIdString = User.FindFirst("UserId")?.Value;
+            if (string.IsNullOrEmpty(userIdString)) return Unauthorized();
+            int userId = int.Parse(userIdString);
+
+            // 2. Truyền xuống Service
+            var result = await _service.GetByIdAsync(id, userId);
             if (result == null)
             {
-                return NotFound($"Không tìm thấy Category có ID = {id}");
+                return NotFound($"Không tìm thấy Category có ID = {id} hoặc bạn không có quyền xem!");
             }
             return Ok(result);
         }
@@ -42,10 +53,14 @@ namespace TaskFlow.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryRequestDto request)
         {
-            // Service sẽ lo việc Map và Lưu
-            var result = await _service.CreateAsync(request);
+            // 1. Móc UserId
+            var userIdString = User.FindFirst("UserId")?.Value;
+            if (string.IsNullOrEmpty(userIdString)) return Unauthorized();
+            int userId = int.Parse(userIdString);
+
+            // 2. Truyền xuống để gán chủ sở hữu cho Category mới
+            var result = await _service.CreateAsync(request, userId);
             
-            // Trả về 201 Created cùng với Location Header
             return CreatedAtAction(nameof(GetCategoryById), new { id = result.Id }, result);
         }
 
@@ -55,16 +70,20 @@ namespace TaskFlow.Api.Controllers
         {
             try 
             {
-                // Service trả về True/False để biết update thành công hay không
-                var success = await _service.UpdateAsync(id, request);
+                // 1. Móc UserId
+                var userIdString = User.FindFirst("UserId")?.Value;
+                if (string.IsNullOrEmpty(userIdString)) return Unauthorized();
+                int userId = int.Parse(userIdString);
+
+                // 2. Truyền xuống Service
+                var success = await _service.UpdateAsync(id, request, userId);
                 
-                if (!success) return NotFound("Không tìm thấy Category để sửa");
+                if (!success) return NotFound("Không tìm thấy Category để sửa hoặc bạn không có quyền!");
                 
                 return NoContent();
             }
             catch (Exception ex)
             {
-                // Bắt lỗi Logic (ví dụ: Trùng tên) từ Service ném ra
                 return BadRequest(new { message = ex.Message });
             }
         }
@@ -75,15 +94,19 @@ namespace TaskFlow.Api.Controllers
         {
             try
             {
-                var success = await _service.DeleteAsync(id);
-                if (!success) return NotFound("Không tìm thấy danh mục để xóa");
+                // 1. Móc UserId
+                var userIdString = User.FindFirst("UserId")?.Value;
+                if (string.IsNullOrEmpty(userIdString)) return Unauthorized();
+                int userId = int.Parse(userIdString);
+
+                // 2. Truyền xuống Service
+                var success = await _service.DeleteAsync(id, userId);
+                if (!success) return NotFound("Không tìm thấy danh mục để xóa hoặc bạn không có quyền!");
 
                 return NoContent();
             }
             catch (Exception ex)
             {
-                // QUAN TRỌNG: Bắt lỗi "Vẫn còn TodoItem bên trong" để báo cho user
-                // Trả về 400 Bad Request kèm lời nhắn
                 return BadRequest(new { message = ex.Message });
             }
         }

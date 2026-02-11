@@ -14,17 +14,20 @@ namespace TaskFlow.Api.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Category>> GetAllAsync()
+        public async Task<IEnumerable<Category>> GetAllAsync(int userId)
         {
-            // Logic cũ của bạn: Lấy list kèm theo TodoItems để đếm
-            return await _context.Categories
-                                 .Include(c => c.TodoItems)
-                                 .ToListAsync();
+            // Lọc chỉ lấy Category của user đang đăng nhập
+                return await _context.Categories
+                    .Where(c => c.UserId == userId)
+                    .Include(t => t.TodoItems)
+                    .ToListAsync();
         }
 
-        public async Task<Category> GetByIdAsync(int id)
+        public async Task<Category> GetByIdAsync(int id, int userId)
         {
-            return await _context.Categories.FindAsync(id);
+            // Tìm đúng ID và phải đúng chủ sở hữu
+            return await _context.Categories
+                .FirstOrDefaultAsync(c => c.Id == id && c.UserId == userId);
         }
 
         public async Task AddAsync(Category category)
@@ -52,10 +55,11 @@ namespace TaskFlow.Api.Repositories
             return await _context.Categories.AnyAsync(c => c.Id == id);
         }
 
-        public async Task<bool> IsNameExistsAsync(string name, int excludeId)
+        public async Task<bool> IsNameExistsAsync(string name, int excludeId, int userId)
         {
-            // Kiểm tra trùng tên nhưng trừ chính nó ra (dùng cho Update)
-            return await _context.Categories.AnyAsync(c => c.Name == name && c.Id != excludeId);
+            // Kiểm tra trùng tên nhưng chỉ trong phạm vi các Category của user này
+            return await _context.Categories
+                .AnyAsync(c => c.Name == name && c.Id != excludeId && c.UserId == userId);
         }
 
         public async Task<bool> HasTodoItemsAsync(int categoryId)

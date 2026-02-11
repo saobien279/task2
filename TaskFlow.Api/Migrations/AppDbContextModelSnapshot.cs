@@ -32,7 +32,12 @@ namespace TaskFlow.Api.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Categories");
                 });
@@ -54,9 +59,14 @@ namespace TaskFlow.Api.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("TodoItems");
                 });
@@ -86,12 +96,27 @@ namespace TaskFlow.Api.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("TaskFlow.Api.Models.Category", b =>
+                {
+                    b.HasOne("TaskFlow.Api.Models.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("TaskFlow.Api.Models.TodoItem", b =>
                 {
                     b.HasOne("TaskFlow.Api.Models.Category", "Category")
                         .WithMany("TodoItems")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TaskFlow.Api.Models.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Category");
