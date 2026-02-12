@@ -19,14 +19,14 @@ namespace TaskFlow.Api.Services
 
         public async Task<IEnumerable<CategoriesResponseDto>> GetAllAsync(int userId)
         {
-            // 1. Truyền userId xuống Repo để lọc lấy đúng đồ của mình
+            // Lỗi sẽ biến mất nếu bạn đã sửa ICategoryRepository
             var categories = await _repository.GetAllAsync(userId);
             return _mapper.Map<IEnumerable<CategoriesResponseDto>>(categories);
         }
 
         public async Task<CategoriesResponseDto> GetByIdAsync(int id, int userId)
         {
-            // Tìm đúng ID và phải đúng chủ sở hữu
+            // Tìm Category theo đúng ID và UserId của người đó
             var category = await _repository.GetByIdAsync(id, userId);
             if (category == null) return null;
 
@@ -37,7 +37,7 @@ namespace TaskFlow.Api.Services
         {
             var category = _mapper.Map<Category>(request);
 
-            // --- QUAN TRỌNG NHẤT: ĐÁNH DẤU CHỦ SỞ HỮU ---
+            // Gán UserId vào để đánh dấu chủ quyền
             category.UserId = userId;
 
             await _repository.AddAsync(category);
@@ -46,21 +46,17 @@ namespace TaskFlow.Api.Services
 
         public async Task<bool> UpdateAsync(int id, UpdateCategoryRequestDto request, int userId)
         {
-            // 1. Tìm bản ghi (kèm userId để đảm bảo không sửa bậy đồ của người khác)
+            // 1. Kiểm tra quyền sở hữu trước khi sửa
             var category = await _repository.GetByIdAsync(id, userId);
             if (category == null) return false;
 
-            // 2. Kiểm tra trùng tên (Trong phạm vi các Category của user này)
+            // 2. Check trùng tên (trong phạm vi UserId đó)
             if (request.Name != null)
             {
                 bool isDuplicate = await _repository.IsNameExistsAsync(request.Name, id, userId);
-                if (isDuplicate)
-                {
-                    throw new Exception("Tên danh mục này đã tồn tại!");
-                }
+                if (isDuplicate) throw new Exception("Tên danh mục này đã tồn tại!");
             }
 
-            // 3. Map đè và lưu
             _mapper.Map(request, category);
             await _repository.UpdateAsync(category);
             return true;
@@ -68,18 +64,14 @@ namespace TaskFlow.Api.Services
 
         public async Task<bool> DeleteAsync(int id, int userId)
         {
-            // 1. Tìm bản ghi (kèm userId để đảm bảo không xóa bậy đồ người khác)
+            // 1. Kiểm tra quyền sở hữu trước khi xóa
             var category = await _repository.GetByIdAsync(id, userId);
             if (category == null) return false;
 
-            // 2. Check xem có công việc nào bên trong không
+            // 2. Check ràng buộc dữ liệu
             bool hasItems = await _repository.HasTodoItemsAsync(id);
-            if (hasItems)
-            {
-                throw new Exception("Không thể xóa danh mục này vì vẫn còn công việc bên trong!");
-            }
+            if (hasItems) throw new Exception("Không thể xóa danh mục này vì vẫn còn công việc bên trong!");
 
-            // 3. Xóa
             await _repository.DeleteAsync(category);
             return true;
         }

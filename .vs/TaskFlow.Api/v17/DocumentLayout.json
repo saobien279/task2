@@ -7,32 +7,12 @@
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\services\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\services\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\services\\todoitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\services\\todoitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\controllers\\todoitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\controllers\\todoitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\dtos\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\dtos\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,20 +23,52 @@
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\repositories\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\services\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\services\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\repositories\\interfaces\\itodoitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\repositories\\interfaces\\itodoitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\repositories\\todoitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\repositories\\todoitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\services\\interfaces\\itodoitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\services\\interfaces\\itodoitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\controllers\\todoitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\controllers\\todoitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\dtos\\categoriesresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\dtos\\categoriesresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\dtos\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\dtos\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,16 +91,8 @@
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\dtos\\todoitemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\dtos\\todoitemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -115,10 +119,6 @@
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\repositories\\interfaces\\itodoitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\repositories\\interfaces\\itodoitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|c:\\users\\sao bien\\source\\repos\\taskflow.api\\taskflow.api\\migrations\\20260203084545_addusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17DC6F1-997F-4841-81CC-569FE31FB96D}|TaskFlow.Api\\TaskFlow.Api.csproj|solutionrelative:taskflow.api\\migrations\\20260203084545_addusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -141,84 +141,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\CategoryService.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Services\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\CategoryService.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Services\\CategoryService.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwD8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T08:54:17.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TodoItemService.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\TodoItemService.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\Services\\TodoItemService.cs",
               "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\TodoItemService.cs",
               "RelativeToolTip": "TaskFlow.Api\\Services\\TodoItemService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAcwGsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-26T08:47:43.661Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwG4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T03:09:42.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Models\\Category.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T02:13:08.157Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "PagedResult.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\DTOs\\PagedResult.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\DTOs\\PagedResult.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\DTOs\\PagedResult.cs",
-              "RelativeToolTip": "TaskFlow.Api\\DTOs\\PagedResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAEAAAAAAAAAA==",
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Repositories\\CategoryRepository.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\CategoryRepository.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Repositories\\CategoryRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T08:15:38.413Z"
+              "WhenOpened": "2026-01-19T08:08:04.701Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "TodoItemsController.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Controllers\\TodoItemsController.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Controllers\\TodoItemsController.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Controllers\\TodoItemsController.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Controllers\\TodoItemsController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T08:57:07.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\Interfaces\\ICategoryService.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\Services\\Interfaces\\ICategoryService.cs",
@@ -226,24 +177,11 @@
               "RelativeToolTip": "TaskFlow.Api\\Services\\Interfaces\\ICategoryService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T08:51:11.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T08:51:11.42Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\CategoryRepository.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Repositories\\CategoryRepository.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\CategoryRepository.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Repositories\\CategoryRepository.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAcwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T08:08:04.701Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\Services\\AuthService.cs",
@@ -255,55 +193,104 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\CategoryService.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Services\\CategoryService.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwE4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T08:54:17.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ICategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\Interfaces\\ICategoryRepository.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\Repositories\\Interfaces\\ICategoryRepository.cs",
               "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\Interfaces\\ICategoryRepository.cs",
               "RelativeToolTip": "TaskFlow.Api\\Repositories\\Interfaces\\ICategoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-19T08:02:54.318Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T03:09:42.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ITodoItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\Interfaces\\ITodoItemRepository.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Repositories\\Interfaces\\ITodoItemRepository.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\Interfaces\\ITodoItemRepository.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Repositories\\Interfaces\\ITodoItemRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T08:48:35.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "TodoItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\TodoItemRepository.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\Repositories\\TodoItemRepository.cs",
               "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\TodoItemRepository.cs",
               "RelativeToolTip": "TaskFlow.Api\\Repositories\\TodoItemRepository.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowD8AAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-23T08:55:15.567Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Program.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Program.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAB0AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T03:40:03.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ITodoItemService.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\Interfaces\\ITodoItemService.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\Services\\Interfaces\\ITodoItemService.cs",
               "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\Interfaces\\ITodoItemService.cs",
               "RelativeToolTip": "TaskFlow.Api\\Services\\Interfaces\\ITodoItemService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-23T08:52:22.239Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Mappings\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Mappings\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Mappings\\MappingProfile.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Mappings\\MappingProfile.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwBgAAAAXAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "TodoItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Controllers\\TodoItemsController.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Controllers\\TodoItemsController.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Controllers\\TodoItemsController.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Controllers\\TodoItemsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T03:13:27.67Z"
+              "WhenOpened": "2025-12-16T08:57:07.642Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "CategoriesResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\DTOs\\CategoriesResponseDto.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\DTOs\\CategoriesResponseDto.cs",
@@ -315,67 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowB4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T03:26:08.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "TodoItem.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Models\\TodoItem.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Models\\TodoItem.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Models\\TodoItem.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Models\\TodoItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T02:13:31.841Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TodoItemParameters.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\DTOs\\TodoItemParameters.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\DTOs\\TodoItemParameters.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\DTOs\\TodoItemParameters.cs",
-              "RelativeToolTip": "TaskFlow.Api\\DTOs\\TodoItemParameters.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowCMAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T08:14:02.654Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAcwBkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T08:02:02.964Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AppDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwD4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T04:20:08.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 13,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\Controllers\\AuthController.cs",
@@ -387,7 +314,103 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PagedResult.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\DTOs\\PagedResult.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\DTOs\\PagedResult.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\DTOs\\PagedResult.cs",
+              "RelativeToolTip": "TaskFlow.Api\\DTOs\\PagedResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T08:15:38.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Models\\Category.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T02:13:08.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Mappings\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Mappings\\MappingProfile.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T03:13:27.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowB4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T03:26:08.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TodoItem.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Models\\TodoItem.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Models\\TodoItem.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Models\\TodoItem.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Models\\TodoItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T02:13:31.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TodoItemParameters.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\DTOs\\TodoItemParameters.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\DTOs\\TodoItemParameters.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\DTOs\\TodoItemParameters.cs",
+              "RelativeToolTip": "TaskFlow.Api\\DTOs\\TodoItemParameters.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowCMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T08:14:02.654Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Middlewares\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Middlewares\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAcwBkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T08:02:02.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "TaskFlow.Api\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "TaskFlow.Api\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwD4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T04:20:08.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "TodoItemResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\DTOs\\TodoItemResponseDto.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\DTOs\\TodoItemResponseDto.cs",
@@ -399,19 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Program.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Program.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAEcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T03:40:03.383Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "TaskFlow.Api\\appsettings.Development.json",
@@ -423,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "AuthDtos.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\DTOs\\AuthDtos.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\DTOs\\AuthDtos.cs",
@@ -435,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "NoAdminAttribute.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Validations\\NoAdminAttribute.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\Validations\\NoAdminAttribute.cs",
@@ -447,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\appsettings.json",
               "RelativeDocumentMoniker": "TaskFlow.Api\\appsettings.json",
@@ -459,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Services\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\Services\\Interfaces\\IAuthService.cs",
@@ -471,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Models\\User.cs",
               "RelativeDocumentMoniker": "TaskFlow.Api\\Models\\User.cs",
@@ -480,18 +491,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-03T08:34:01.811Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ITodoItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\Interfaces\\ITodoItemRepository.cs",
-              "RelativeDocumentMoniker": "TaskFlow.Api\\Repositories\\Interfaces\\ITodoItemRepository.cs",
-              "ToolTip": "C:\\Users\\SAO BIEN\\source\\repos\\TaskFlow.Api\\TaskFlow.Api\\Repositories\\Interfaces\\ITodoItemRepository.cs",
-              "RelativeToolTip": "TaskFlow.Api\\Repositories\\Interfaces\\ITodoItemRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T08:48:35.978Z"
             },
             {
               "$type": "Document",

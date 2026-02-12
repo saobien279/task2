@@ -14,25 +14,32 @@ namespace TaskFlow.Api.Repositories
             _context = context;
         }
 
+        // Thực thi hàm GetAll có userId
         public async Task<IEnumerable<Category>> GetAllAsync(int userId)
         {
-            // Lọc chỉ lấy Category của user đang đăng nhập
-                return await _context.Categories
-                    .Where(c => c.UserId == userId)
-                    .Include(t => t.TodoItems)
-                    .ToListAsync();
+            return await _context.Categories
+                .Include(c => c.TodoItems)
+                .Where(c => c.UserId == userId)
+                .ToListAsync();
         }
 
+        // Thực thi hàm cũ (cho TodoItem)
+        //public async Task<Category> GetByIdAsync(int id)
+        //{
+        //    return await _context.Categories
+        //        .FirstOrDefaultAsync(c => c.Id == id);
+        //}
+
+        // Thực thi hàm mới (cho CategoryService) -> HẾT LỖI Ở ĐÂY
         public async Task<Category> GetByIdAsync(int id, int userId)
         {
-            // Tìm đúng ID và phải đúng chủ sở hữu
             return await _context.Categories
                 .FirstOrDefaultAsync(c => c.Id == id && c.UserId == userId);
         }
 
         public async Task AddAsync(Category category)
         {
-            _context.Categories.Add(category);
+            await _context.Categories.AddAsync(category);
             await _context.SaveChangesAsync();
         }
 
@@ -48,23 +55,21 @@ namespace TaskFlow.Api.Repositories
             await _context.SaveChangesAsync();
         }
 
-
-        //kiemtra
         public async Task<bool> ExistsAsync(int id)
         {
             return await _context.Categories.AnyAsync(c => c.Id == id);
         }
 
+        // Thực thi hàm check tên có userId
         public async Task<bool> IsNameExistsAsync(string name, int excludeId, int userId)
         {
-            // Kiểm tra trùng tên nhưng chỉ trong phạm vi các Category của user này
             return await _context.Categories
                 .AnyAsync(c => c.Name == name && c.Id != excludeId && c.UserId == userId);
         }
 
-        public async Task<bool> HasTodoItemsAsync(int categoryId)
+        public async Task<bool> HasTodoItemsAsync(int id)
         {
-            return await _context.TodoItems.AnyAsync(t => t.CategoryId == categoryId);
+            return await _context.TodoItems.AnyAsync(t => t.CategoryId == id);
         }
     }
 }
