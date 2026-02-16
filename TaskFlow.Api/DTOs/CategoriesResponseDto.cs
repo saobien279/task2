@@ -14,18 +14,18 @@ namespace TaskFlow.Api.DTOs
     public class CreateCategoryRequestDto
     {
         [Required(ErrorMessage = "Tiêu đề là bắt buộc")]
-        [StringLength(100, MinimumLength = 5 , ErrorMessage = "Tiêu đề phải từ 5 đến 100 ký tự")]
-        [NoAdmin]
+        [StringLength(100, ErrorMessage = "Tên danh mục không được quá 100 ký tự")]
+        //[NoAdmin]
         public string Name { get; set; }
     }
 
     public class UpdateCategoryRequestDto
     {
-        [Required]
+        [Required(ErrorMessage = "Bắt buộc phải có ID")]
         public int ? id  { get; set; }
 
-        [Required]
-        [StringLength(100, MinimumLength = 5,ErrorMessage = "Tiêu đề phải từ 5 đến 100 ký tự")]
+        [Required(ErrorMessage = "Tên danh mục là bắt buộc")]
+        [StringLength(100, ErrorMessage = "Tên danh mục không được quá 100 ký tự")]
         public string Name { get; set; }
 
     }

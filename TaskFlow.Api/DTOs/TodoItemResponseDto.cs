@@ -14,8 +14,8 @@ namespace TaskFlow.Api.DTOs
 
     public class CreateTodoItemRequestDto
     {
-        [Required(ErrorMessage = "Tiêu Đề Là Bắt Buộc")]
-        [StringLength(100 , MinimumLength = 5 ,ErrorMessage = "Tiêu đề phải từ 5 đến 100 ký tự")]
+        [Required(ErrorMessage = "Tiêu đề công việc là bắt buộc")]
+        [StringLength(200, ErrorMessage = "Tiêu đề không được quá 200 ký tự")]
         public string Title { get; set; }
         public bool IsCompleted { get; set; }
 
@@ -26,8 +26,8 @@ namespace TaskFlow.Api.DTOs
     public class UpdateTodoItemRequestDto
     {
 
-        [Required(ErrorMessage = "Tiêu đề không được để trống")]
-        [StringLength(100, MinimumLength = 5, ErrorMessage = "Tiêu đề phải từ 5 đến 100 ký tự")]
+        [Required(ErrorMessage = "Tiêu đề công việc là bắt buộc")]
+        [StringLength(200, ErrorMessage = "Tiêu đề không được quá 200 ký tự")]
         public string Title { get; set; }
 
         public bool IsCompleted { get; set; }
